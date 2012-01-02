@@ -103,9 +103,6 @@
         <item>0</item>
         <item>0</item>
     </integer-array>
-    
-    <integer name="config_deskDockKeepsScreenOn">0</integer>
-    <integer name="config_carDockKeepsScreenOn">1</integer>
 
     <!-- Default color for notification LED is green -->
     <color name="config_defaultNotificationColor">#ff00ff00</color>
@@ -122,16 +119,6 @@
     <!-- If true, the screen can be rotated via the accelerometer in all 4
          rotations as the default behavior. -->
     <bool name="config_allowAllRotations">true</bool>
-
-    <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
-         Software implementation will be used if config_hardware_auto_brightness_available is not set -->
-    <bool name="config_automatic_brightness_available">true</bool>
-
-    <!-- XXXXXX END OF RESOURCES USING WRONG NAMING CONVENTION -->
-
-    <!-- The number of degrees to rotate the display when the keyboard is open. -->
-    <!-- MUST STAY TO -1, else rot. sensor is disabled -->
-    <integer name="config_lidOpenRotation">-1</integer>
 
     <!-- The number of degrees to rotate the display when the device is in a desk dock.
          A value of -1 means no change in orientation by default. -->

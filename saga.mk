@@ -41,7 +41,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y \
-    persist.sys.usb.config=adb,mass_storage
+    persist.sys.usb.config=adb,mass_storage \
+    sys.media.vdec.sw=1
 
 # Override /proc/sys/vm/dirty_ratio on UMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -259,6 +260,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/saga/proprietary/akmd:/system/bin/akmd \
     device/htc/saga/proprietary/bma150_usr:/system/bin/bma150_usr \
+    device/htc/saga/proprietary/bootcomplete:/system/bin/bootcomplete \
     device/htc/saga/proprietary/htc_ebdlogd:/system/bin/htc_ebdlogd \
     device/htc/saga/proprietary/logcat2:/system/bin/logcat2 \
     device/htc/saga/proprietary/rmt_storage:/system/bin/rmt_storage \

@@ -413,6 +413,15 @@ service bootanim /system/bin/bootanimation
     disabled
     oneshot
 
+on property:dev.bootcomplete=1
+    start bootcomplete
+
+service bootcomplete /system/bin/bootcomplete
+    user root
+    group root
+    disabled
+    oneshot
+
 service dbus /system/bin/dbus-daemon --system --nofork
     class main
     socket dbus stream 660 bluetooth bluetooth
@@ -431,10 +440,6 @@ service bluetoothd /system/bin/bluetoothd -n
 service installd /system/bin/installd
     class main
     socket installd stream 600 system system
-
-service flash_recovery /system/etc/install-recovery.sh
-    class main
-    oneshot
 
 service racoon /system/bin/racoon
     class main
