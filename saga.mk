@@ -21,6 +21,7 @@ PRODUCT_COPY_FILES += \
     device/htc/saga/init:root/init \
     device/htc/saga/init.saga.rc:root/init.saga.rc \
     device/htc/saga/init.rc:root/init.rc \
+    device/htc/saga/ueventd.rc:root/ueventd.rc \
     device/htc/saga/ueventd.saga.rc:root/ueventd.saga.rc
 
 
