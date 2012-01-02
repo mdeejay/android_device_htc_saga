@@ -181,41 +181,6 @@ PRODUCT_COPY_FILES += \
     device/htc/saga/dsp/soundimage/Sound_Treble_Booster.txt:system/etc/soundimage/Sound_Treble_Booster.txt \
     device/htc/saga/dsp/soundimage/Sound_Vocal_Booster.txt:system/etc/soundimage/Sound_Vocal_Booster.txt
 
-# Additional NAM Audio DSP Profiles to NAM Package
-PRODUCT_COPY_FILES += \
-    device/htc/saga/nam/default.acdb:system/etc/nam/default.acdb \
-    device/htc/saga/nam/default_org.acdb:system/etc/nam/default_org.acdb \
-    device/htc/saga/nam/AdieHWCodec.csv:system/etc/nam/AdieHWCodec.csv \
-    device/htc/saga/nam/AIC3254_REG_DualMic_MCLK.csv:system/etc/nam/AIC3254_REG_DualMic_MCLK.csv \
-    device/htc/saga/nam/CodecDSPID_MCLK.txt:system/etc/nam/CodecDSPID_MCLK.txt \
-    device/htc/saga/nam/Sound_Treble_Booster_MCLK.txt:system/etc/nam/Sound_Treble_Booster_MCLK.txt \
-    device/htc/saga/nam/Sound_Vocal_Booster_MCLK.txt:system/etc/nam/Sound_Vocal_Booster_MCLK.txt \
-    device/htc/saga/nam/Sound_SRS_A_SPK_MCLK.txt:system/etc/nam/Sound_SRS_A_SPK_MCLK.txt \
-    device/htc/saga/nam/Sound_SRS_V_HP_MCLK.txt:system/etc/nam/Sound_SRS_V_HP_MCLK.txt \
-    device/htc/saga/nam/Sound_SRS_V_SPK_MCLK.txt:system/etc/nam/Sound_SRS_V_SPK_MCLK.txt \
-    device/htc/saga/nam/Sound_Jazz_MCLK.txt:system/etc/nam/Sound_Jazz_MCLK.txt \
-    device/htc/saga/nam/Sound_Latin_MCLK.txt:system/etc/nam/Sound_Latin_MCLK.txt \
-    device/htc/saga/nam/Sound_New_Age_MCLK.txt:system/etc/nam/Sound_New_Age_MCLK.txt \
-    device/htc/saga/nam/Sound_Original_MCLK.txt:system/etc/nam/Sound_Original_MCLK.txt \
-    device/htc/saga/nam/Sound_Piano_MCLK.txt:system/etc/nam/Sound_Piano_MCLK.txt \
-    device/htc/saga/nam/Sound_Pop_MCLK.txt:system/etc/nam/Sound_Pop_MCLK.txt \
-    device/htc/saga/nam/Sound_R_B_MCLK.txt:system/etc/nam/Sound_R_B_MCLK.txt \
-    device/htc/saga/nam/Sound_Rock_MCLK.txt:system/etc/nam/Sound_Rock_MCLK.txt \
-    device/htc/saga/nam/Sound_SRS_A_HP_MCLK.txt:system/etc/nam/Sound_SRS_A_HP_MCLK.txt \
-    device/htc/saga/nam/Sound_Dualmic_SPK_MCLK.txt:system/etc/nam/Sound_Dualmic_SPK_MCLK.txt \
-    device/htc/saga/nam/Sound_Dualmic_EP_MCLK.txt:system/etc/nam/Sound_Dualmic_EP_MCLK.txt \
-    device/htc/saga/nam/Sound_Dualmic_MCLK.txt:system/etc/nam/Sound_Dualmic_MCLK.txt \
-    device/htc/saga/nam/Sound_Dolby_A_SPK_MCLK.txt:system/etc/nam/Sound_Dolby_A_SPK_MCLK.txt \
-    device/htc/saga/nam/Sound_Dolby_HP_MCLK.txt:system/etc/nam/Sound_Dolby_HP_MCLK.txt \
-    device/htc/saga/nam/Sound_Dolby_Spk_MCLK.txt:system/etc/nam/Sound_Dolby_Spk_MCLK.txt \
-    device/htc/saga/nam/Sound_Dolby_V_HP_MCLK.txt:system/etc/nam/Sound_Dolby_V_HP_MCLK.txt \
-    device/htc/saga/nam/Sound_Dolby_V_SPK_MCLK.txt:system/etc/nam/Sound_Dolby_V_SPK_MCLK.txt \
-    device/htc/saga/nam/Sound_Dolby_A_HP_MCLK.txt:system/etc/nam/Sound_Dolby_A_HP_MCLK.txt \
-    device/htc/saga/nam/Sound_Bass_Booster_MCLK.txt:system/etc/nam/Sound_Bass_Booster_MCLK.txt \
-    device/htc/saga/nam/Sound_Blues_MCLK.txt:system/etc/nam/Sound_Blues_MCLK.txt \
-    device/htc/saga/nam/Sound_Classical_MCLK.txt:system/etc/nam/Sound_Classical_MCLK.txt \
-    device/htc/saga/nam/Sound_Country_MCLK.txt:system/etc/nam/Sound_Country_MCLK.txt
-
 PRODUCT_COPY_FILES += \
     device/htc/saga/vold.fstab:system/etc/vold.fstab
 
@@ -266,6 +231,7 @@ PRODUCT_COPY_FILES += \
     device/htc/saga/proprietary/logcat2:/system/bin/logcat2 \
     device/htc/saga/proprietary/rmt_storage:/system/bin/rmt_storage \
     device/htc/saga/proprietary/snd3254:/system/bin/snd3254 \
+    device/htc/saga/proprietary/sh:/system/bin/sh \
     device/htc/saga/proprietary/AudioBTID.csv:/system/etc/AudioBTID.csv \
     device/htc/saga/proprietary/eglsubAndroid.so:/system/lib/egl/eglsubAndroid.so \
     device/htc/saga/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
@@ -285,8 +251,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT="htc_europe/htc_saga/saga:2.3.5/GRJ90/156318.4:user/release-keys" \
-BUILD_TYPE="userdebug" \
-PRODUCT_BRAND="htc_europe"
+BUILD_TYPE="userdebug"
 
 PRODUCT_NAME := htc_saga
 PRODUCT_DEVICE := saga
