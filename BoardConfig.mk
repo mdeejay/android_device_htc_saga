@@ -49,13 +49,18 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcm4329/parameters/firmware_pat
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcm4329.ko"
 WIFI_DRIVER_FW_PATH_STA          := "/vendor/firmware/fw_bcm4329.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/vendor/firmware/fw_bcm4329_apsta.bin"
+WIFI_DRIVER_FW_PATH_P2P          := "/vendor/firmware/fw_bcm4329_p2p.bin"
 WIFI_DRIVER_MODULE_NAME          := "bcm4329"
 WIFI_DRIVER_MODULE_ARG           := "firmware_path=/vendor/firmware/fw_bcm4329.bin nvram_path=/proc/calibration iface_name=wlan"
 BOARD_WLAN_DEVICE_REV            := bcm4329
 WIFI_BAND                        := 802_11_ABG
+CONFIG_P2P := true
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
+
+BOARD_HAVE_FM_RADIO := true
+BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1
 BOARD_KERNEL_RECOVERY_CMDLINE := $(BOARD_KERNEL_CMDLINE) msmsdcc_power_gpio=88
@@ -72,15 +77,16 @@ TARGET_USES_C2D_COMPOSITION := false
 TARGET_USES_SF_BYPASS := false
 TARGET_HAVE_BYPASS := false
 TARGET_QCOM_HDMI_OUT := false
-TARGET_USES_OVERLAY := true
+TARGET_USES_OVERLAY := false
+BOARD_USE_QCOM_PMEM := false
 TARGET_GRALLOC_USES_ASHMEM := false
+TARGET_GRALLOC_USES_PMEM := true
 
 ENABLE_WTF_USE_ACCELERATED_COMPOSITING := true
 
 BOARD_EGL_CFG := device/htc/saga/egl.cfg
 
 BOARD_PREBUILT_LIBAUDIO := false
-BOARD_USE_QCOM_PMEM := true
 BOARD_USES_QCOM_LIBS := true
 BOARD_USES_QCOM_LIBRPC := true
 

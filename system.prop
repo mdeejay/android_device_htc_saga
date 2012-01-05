@@ -1,3 +1,4 @@
+ro.buildversion=Virtuous Quattro
 #
 # system.prop for saga
 #
@@ -7,6 +8,8 @@ debug.fb.rgb565=0
 debug.sf.hw=1
 
 # Qualcomm display settings
+debug.qctwa.statusbar = 1
+debug.qctwa.preservebuf = 1
 debug.enabletr=false
 com.qc.hardware=true
 

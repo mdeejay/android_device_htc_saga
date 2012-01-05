@@ -42,7 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y \
-    persist.sys.usb.config=adb,mass_storage \
+    persist.sys.usb.config=mass_storage,rndis,adb \
     sys.media.vdec.sw=1
 
 # Override /proc/sys/vm/dirty_ratio on UMS
@@ -107,10 +107,11 @@ PRODUCT_PACKAGES += \
 
 # missing packages
 PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory \
     Mms \
     Stk \
-    com.android.future.usb.accessory \
     Superuser \
+    Trebuchet \
     su
 
 # Nexus Prime bootanimation
@@ -130,6 +131,9 @@ PRODUCT_COPY_FILES += \
 # Firmware
 PRODUCT_COPY_FILES += \
     device/htc/saga/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
+    device/htc/saga/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
+    device/htc/saga/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin \
+    device/htc/saga/firmware/fw_bcm4329_p2p.bin:system/vendor/firmware/fw_bcm4329_p2p.bin \
     device/htc/saga/firmware/default.acdb:system/etc/firmware/default.acdb \
     device/htc/saga/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
     device/htc/saga/firmware/vidc_720p_command_control.fw:system/etc/firmware/vidc_720p_command_control.fw \
@@ -246,8 +250,7 @@ PRODUCT_COPY_FILES += \
     device/htc/saga/proprietary/libgemini.so:/system/lib/libgemini.so \
     device/htc/saga/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \
     device/htc/saga/proprietary/libhtc_ril.so:/system/lib/libhtc_ril.so \
-    device/htc/saga/proprietary/libmmipl.so:/system/lib/libmmipl.so \
-    device/htc/saga/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so
+    device/htc/saga/proprietary/libmmipl.so:/system/lib/libmmipl.so
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT="htc_europe/htc_saga/saga:2.3.5/GRJ90/156318.4:user/release-keys" \

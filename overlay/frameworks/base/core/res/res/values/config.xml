@@ -57,12 +57,12 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
+        <item>31</item>
         <item>41</item>
+        <item>51</item>
         <item>61</item>
-        <item>81</item>
-        <item>112</item>
-        <item>143</item>
-        <item>163</item>
+        <item>95</item>
+        <item>130</item>
         <item>186</item>
         <item>208</item>
         <item>231</item>
@@ -77,7 +77,7 @@
         <item>255</item>
         <item>255</item>
         <item>255</item>
-        <item>0</item>
+        <item>255</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -92,9 +92,9 @@
          Passion has no keyboard so all values are zero.
     -->
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>

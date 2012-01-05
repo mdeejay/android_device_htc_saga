@@ -13,7 +13,6 @@ loglevel 3
 
 # setup the global environment
     export EXTERNAL_STORAGE /mnt/sdcard
-    export TERMINFO /system/etc/terminfo
     export PATH /sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
     export LD_LIBRARY_PATH /vendor/lib:/system/lib
     export ANDROID_BOOTLOGO 1
@@ -100,13 +99,6 @@ on fs
 # This is needed by any process that uses socket tagging.
     chmod 0644 /dev/xt_qtaguid
 
-# Add permissions for camera access
-    chmod 0666 /dev/msm_camera/config0
-    chmod 0666 /dev/msm_camera/control0
-    chmod 0666 /dev/msm_camera/frame0
-
-    chmod 0666 /dev/graphics/fb0
-
 on post-fs
     # once everything is setup, no need to modify / - screwthat rw
     mount rootfs rootfs / rw remount
@@ -172,6 +164,7 @@ on post-fs-data
     mkdir /data/misc/wifi 0770 wifi wifi
     chmod 0770 /data/misc/wifi
     chmod 0660 /data/misc/wifi/wpa_supplicant.conf
+    chmod 0660 /data/misc/wifi/p2p_supplicant.conf
     mkdir /data/local 0771 shell shell
     mkdir /data/local/tmp 0771 shell shell
     mkdir /data/data 0771 system system

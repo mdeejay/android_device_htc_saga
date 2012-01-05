@@ -19,12 +19,12 @@
 
 <device name="Android">
   <item name="none">0</item>
-  <item name="screen.on">110</item> <!-- Estimated -->
+  <item name="screen.on">90</item> <!-- Estimated -->
   <item name="bluetooth.active">142</item> <!-- In call -->
   <item name="bluetooth.on">0.3</item>
   <!-- CPU wakelock held for 830ms on bluetooth headset at command. 43mA * 830 -->
   <item name="bluetooth.at">35690</item>
-  <item name="screen.full">250</item> <!-- Estimated -->
+  <item name="screen.full">200</item> <!-- Estimated -->
   <item name="wifi.on">4</item>
   <item name="wifi.active">120</item>
   <item name="wifi.scan">220</item>
